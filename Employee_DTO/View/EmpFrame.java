@@ -21,7 +21,7 @@ public class EmpFrame extends Frame	 {
 	private TextField txtEmpNm;
 	
 	private Label lblLocation;
-	private Choice Location;
+	private Choice officeLocation;
 	
 	private Label lblEmpAddress;
 	private TextArea addressTxt;
@@ -55,9 +55,11 @@ public class EmpFrame extends Frame	 {
 	private Button btnPrev;
 	
 	
-	Frame f = new Frame();
+//Frame f = new EmpFrame();
 	
 	public EmpFrame () {
+	
+		
 		
 		this.setBounds(50,50,700,700);
 		this.setTitle("Employee Information");
@@ -129,14 +131,14 @@ public class EmpFrame extends Frame	 {
 		lblLocation.setBounds(20, 200, 150, 20);
 		this.add(lblLocation);
 				
-		Location = new Choice();
-		Location.setBounds(170,200 , 100, 100);
-		Location.add("Pune");
-		Location.add("Bengluru");
-		Location.add("Chennai");
-		Location.add("Hyderabad");
-		Location.add("Hubali");
-		this.add(Location);
+		officeLocation = new Choice();
+		officeLocation.setBounds(170,200 , 100, 100);
+		officeLocation.add("Pune");
+		officeLocation.add("Bengluru");
+		officeLocation.add("Chennai");
+		officeLocation.add("Hyderabad");
+		officeLocation.add("Hubali");
+		this.add(officeLocation);
 		
 		//(y,x,height,width)
 		lblEmpAddress = new Label (" Employee Address");
@@ -210,8 +212,249 @@ public class EmpFrame extends Frame	 {
 				}
 		}
 		
-		);
-		
-		
+		);		
 	}
+
+	public Label getLabelEmployeeid() {
+		return LabelEmployeeid;
+	}
+
+	public void setLabelEmployeeid(Label labelEmployeeid) {
+		LabelEmployeeid = labelEmployeeid;
+	}
+
+	public Label getLabelEmployeeName() {
+		return LabelEmployeeName;
+	}
+
+	public void setLabelEmployeeName(Label labelEmployeeName) {
+		LabelEmployeeName = labelEmployeeName;
+	}
+
+	public TextField getTxtEmpId() {
+		return txtEmpId;
+	}
+
+	public void setTxtEmpId(TextField txtEmpId) {
+		this.txtEmpId = txtEmpId;
+	}
+
+	public TextField getTxtEmpNm() {
+		return txtEmpNm;
+	}
+
+	public void setTxtEmpNm(TextField txtEmpNm) {
+		this.txtEmpNm = txtEmpNm;
+	}
+
+	public Label getLblLocation() {
+		return lblLocation;
+	}
+
+	public void setLblLocation(Label lblLocation) {
+		this.lblLocation = lblLocation;
+	}
+
+	
+	public Choice getOfficeLocation() {
+		return officeLocation;
+	}
+
+	public void setOfficeLocation(Choice officeLocation) {
+		this.officeLocation = officeLocation;
+	}
+
+	public Label getLblEmpAddress() {
+		return lblEmpAddress;
+	}
+
+	public void setLblEmpAddress(Label lblEmpAddress) {
+		this.lblEmpAddress = lblEmpAddress;
+	}
+
+	public TextArea getAddressTxt() {
+		return addressTxt;
+	}
+
+	public void setAddressTxt(TextArea addressTxt) {
+		this.addressTxt = addressTxt;
+	}
+
+	public Label getLblEmpSalary() {
+		return lblEmpSalary;
+	}
+
+	public void setLblEmpSalary(Label lblEmpSalary) {
+		this.lblEmpSalary = lblEmpSalary;
+	}
+
+	public TextField getEmpsalaryTxt() {
+		return empsalaryTxt;
+	}
+
+	public void setEmpsalaryTxt(TextField empsalaryTxt) {
+		this.empsalaryTxt = empsalaryTxt;
+	}
+
+	public Label getLblEmployeePerk() {
+		return lblEmployeePerk;
+	}
+
+	public void setLblEmployeePerk(Label lblEmployeePerk) {
+		this.lblEmployeePerk = lblEmployeePerk;
+	}
+
+	public Checkbox getPfOptionChk() {
+		return pfOptionChk;
+	}
+
+	public void setPfOptionChk(Checkbox pfOptionChk) {
+		this.pfOptionChk = pfOptionChk;
+	}
+
+	public Checkbox getMealptionChk() {
+		return mealptionChk;
+	}
+
+	public void setMealptionChk(Checkbox mealptionChk) {
+		this.mealptionChk = mealptionChk;
+	}
+
+	public Checkbox getNpsChk() {
+		return npsChk;
+	}
+
+	public void setNpsChk(Checkbox npsChk) {
+		this.npsChk = npsChk;
+	}
+
+	public Checkbox getGratuityChk() {
+		return gratuityChk;
+	}
+
+	public void setGratuityChk(Checkbox gratuityChk) {
+		this.gratuityChk = gratuityChk;
+	}
+
+	public Checkbox getMediclaimChk() {
+		return MediclaimChk;
+	}
+
+	public void setMediclaimChk(Checkbox mediclaimChk) {
+		MediclaimChk = mediclaimChk;
+	}
+
+	public CheckboxGroup getGenderGroup() {
+		return GenderGroup;
+	}
+
+	public void setGenderGroup(CheckboxGroup genderGroup) {
+		GenderGroup = genderGroup;
+	}
+
+	public Label getLblGender() {
+		return lblGender;
+	}
+
+	public void setLblGender(Label lblGender) {
+		this.lblGender = lblGender;
+	}
+
+	public Checkbox getMaleChk() {
+		return maleChk;
+	}
+
+	public void setMaleChk(Checkbox maleChk) {
+		this.maleChk = maleChk;
+	}
+
+	public Checkbox getFemaleChk() {
+		return femaleChk;
+	}
+
+	public void setFemaleChk(Checkbox femaleChk) {
+		this.femaleChk = femaleChk;
+	}
+
+	public Checkbox getOtherChk() {
+		return otherChk;
+	}
+
+	public void setOtherChk(Checkbox otherChk) {
+		this.otherChk = otherChk;
+	}
+
+	public Button getBtnSave() {
+		return btnSave;
+	}
+
+	public void setBtnSave(Button btnSave) {
+		this.btnSave = btnSave;
+	}
+
+	public Button getBtnDelete() {
+		return btnDelete;
+	}
+
+	public void setBtnDelete(Button btnDelete) {
+		this.btnDelete = btnDelete;
+	}
+
+	public Button getBtnUpdate() {
+		return btnUpdate;
+	}
+
+	public void setBtnUpdate(Button btnUpdate) {
+		this.btnUpdate = btnUpdate;
+	}
+
+	public Button getBtnSearch() {
+		return btnSearch;
+	}
+
+	public void setBtnSearch(Button btnSearch) {
+		this.btnSearch = btnSearch;
+	}
+
+	public Button getBtnFirst() {
+		return btnFirst;
+	}
+
+	public void setBtnFirst(Button btnFirst) {
+		this.btnFirst = btnFirst;
+	}
+
+	public Button getBtnLast() {
+		return btnLast;
+	}
+
+	public void setBtnLast(Button btnLast) {
+		this.btnLast = btnLast;
+	}
+
+	public Button getBtnNext() {
+		return btnNext;
+	}
+
+	public void setBtnNext(Button btnNext) {
+		this.btnNext = btnNext;
+	}
+
+	public Button getBtnPrev() {
+		return btnPrev;
+	}
+
+	public void setBtnPrev(Button btnPrev) {
+		this.btnPrev = btnPrev;
+	}
+
+//	public Frame getF() {
+//		return f;
+//	}
+
+//	public void setF(Frame f) {
+//		this.f = f;
+//	}
+
+	
 }
