@@ -28,16 +28,17 @@ public class JuggleActionHandler implements ActionListener {
 		Integer SaveSecondNo;
 		Integer SaveThirdNo;
 		
-		NumberFirst = Integer.parseInt(FirstNum.getText());
-		NumberSecond = Integer.parseInt(SecondNum.getText());
-		NumberThird = Integer.parseInt(ThirdNum.getText());
-		
-		SaveSecondNo = NumberSecond;
-		SaveThirdNo = NumberThird;
-		
-		
+		try {
+			NumberFirst = Integer.parseInt(FirstNum.getText());
+			NumberSecond = Integer.parseInt(SecondNum.getText());
+			NumberThird = Integer.parseInt(ThirdNum.getText());
+			
+			SaveSecondNo = NumberSecond;
+			SaveThirdNo = NumberThird;
+				
 		if (e.getActionCommand().equalsIgnoreCase("ClockWise"))
-{
+			{
+			
 			NumberFirst = NumberFirst + 1;
 			NumberSecond = NumberSecond + 1;
 			NumberThird = NumberThird + 1;
@@ -46,18 +47,24 @@ public class JuggleActionHandler implements ActionListener {
 			ThirdNum.setText(String.valueOf(NumberSecond));
 			FirstNum.setText(String.valueOf(NumberThird));	
 				
-}
-else if ( e.getActionCommand().equalsIgnoreCase("AntiClockWise"))
-{
-	NumberFirst = NumberFirst - 1;
-	NumberSecond = NumberSecond - 1;
-	NumberThird = NumberThird - 1;
+			}
+		else if ( e.getActionCommand().equalsIgnoreCase("AntiClockWise"))
+			{
+			
+			NumberFirst = NumberFirst - 1;
+			NumberSecond = NumberSecond - 1;
+			NumberThird = NumberThird - 1;
 	
-	SecondNum.setText(String.valueOf(NumberFirst));
-	ThirdNum.setText(String.valueOf(NumberSecond));
-	FirstNum.setText(String.valueOf(NumberThird));
+			SecondNum.setText(String.valueOf(NumberFirst));
+			ThirdNum.setText(String.valueOf(NumberSecond));
+			FirstNum.setText(String.valueOf(NumberThird));
 	
-}
+			}
+		}catch(ArithmeticException ec) {
+			System.out.println("Enter proper numbers");
+		}catch(NumberFormatException ef) {
+			System.out.println("Enter proper number");
+		}
 	}
 
 }
